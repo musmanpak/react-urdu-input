@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": false,
   "files": [
-    "build"
+    "build",
+    "src/ReactUrduInput.d.ts"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
