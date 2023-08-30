@@ -230,7 +230,13 @@ const aENTER = '\r';
 const aNLINE = '\n';
 const aTAB = '\t';
 
-function ReactUrduInput() {
+interface ReactUrduInputProps {
+  placeholder?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined
+  value?: string | undefined;
+}
+
+const ReactUrduInput: React.FC<ReactUrduInputProps> = (props) => {
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -551,7 +557,9 @@ function ReactUrduInput() {
     <input
       ref={inputRef}
       type="text"
-      placeholder=""
+      placeholder={props.placeholder}
+      onChange={props.onChange}
+      value={props.value}
       style={{ direction: 'rtl', textAlign: 'right' }}
     />
   );
